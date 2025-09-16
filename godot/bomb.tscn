@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://doifmiaakingg"]
+
+[ext_resource type="Script" path="res://bomb.gd" id="1_2hsqw"]
+[ext_resource type="Texture2D" uid="uid://bkqy0fajpm127" path="res://assets/bomb.png" id="1_e8r50"]
+[ext_resource type="AudioStream" uid="uid://dolepn6k55e4q" path="res://assets/bomb.wav" id="3_ahiif"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_65n6u"]
+radius = 9.0
+
+[node name="Bomb" type="CharacterBody2D"]
+script = ExtResource("1_2hsqw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_e8r50")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_65n6u")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ahiif")
